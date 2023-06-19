@@ -3,16 +3,52 @@
   <head>
     <title>Mi perfil</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script>
+      // Aquí es donde escribirás tu función JavaScript
+      function cambiarColorFondo(color) {
+      document.body.style.backgroundColor = color;
+    }
+    </script>
+
+    <script>
+      function changeBackground() {
+        var body = document.querySelector('body');
+        if (body.style.backgroundColor === 'white') {
+          body.style.backgroundColor = 'black';
+        } else {
+          body.style.backgroundColor = 'white';
+        }
+      }
+    </script>
+
   </head>
   <body>
-    <div class="container">
-      <div class="profile">
-        <img src="profile-pic.jpg" alt="Foto de perfil">
-        <h2>Andy</h2>
-        <p>Edad: 25 años</p>
-        <p>Ubicación: Ciudad de México</p>
-        <p>Descripción: Soy un apasionado del desarrollo web y me encanta aprender cosas nuevas.</p>
-      </div>
-    </div>
+    <header>
+      <nav>
+        <ul>
+          <li> <a href="#inicio">Inicio</a> </li>
+          <li> <a href="#experiencia">Experiencia</a> </li>
+          <li> <a href="#acerca-de-mi">Acerca de mí</a> </li>
+          <li> <a href="#contacto">Contacto</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+        <div class="container">
+          <div class="profile"> <br>
+            <img src="profile-pic.jpg" alt="Foto de perfil">
+            <h2>Andy</h2>
+            <p>Edad: 25 años</p>
+            <p>Ubicación: Ciudad de Buenos Aires</p>
+            <p>Descripción: Soy un apasionado del desarrollo web y me encanta aprender cosas nuevas.</p>
+          </div>
+        </div>
+
+        <button onclick="changeBackground()">Cambiar color de fondo</button>
+        <button onclick="cambiarColorFondo('red')">Rojo</button>
+        <button onclick="cambiarColorFondo('green')">Verde</button>
+        <button onclick="cambiarColorFondo('blue')">Azul</button>
+
   </body>
 </html>
